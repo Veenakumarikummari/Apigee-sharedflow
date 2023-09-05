@@ -70,7 +70,7 @@ jobs:
       - name: mvn deploy config
         run: mvn apigee-enterprise:deploy -P eval -Dbearer='${{ steps.auth.outputs.access_token }}'
           -Dapigee.org=${{ github.event.inputs.deployment-region }} -Denv=${{
-          github.event.inputs.deployment-env}} -Dapigee.config.dir= ./samples/security-sharedflow/src/sharedflow
+          github.event.inputs.deployment-env}} -Dapigee.config.dir= ./samples
           -Dapigee.config.options=update
       # - name: mvn deploy config
       #   # run: mvn apigee-config:${{ github.event.inputs.deployment-config }} -P eval
